@@ -6,9 +6,9 @@ import java.util.Properties;
 
 import org.project.constants.FrameworkConstants;
 
-public final class ReadPropertyFile {
+public final class PropertyFile {
 
-	private ReadPropertyFile() {}
+	private PropertyFile() {}
 
 	private static Properties prop = new Properties();
 	static {

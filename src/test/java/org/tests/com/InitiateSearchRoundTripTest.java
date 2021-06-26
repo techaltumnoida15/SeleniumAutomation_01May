@@ -7,10 +7,11 @@ import org.testng.annotations.Test;
 public class InitiateSearchRoundTripTest extends BaseTest{
 
 	@Test
-	public void testCase01() {
+	public void initiateSearchRoundTripTest() {
 		new HomePage()
 		.waitForHomePageLoad()
 		.enterFrom("LAS")
 		.enterTo("LAX");
+		
 	}
 }

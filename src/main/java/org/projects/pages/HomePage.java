@@ -14,7 +14,7 @@ public final class HomePage extends BasePage{
 	
 	public HomePage waitForHomePageLoad() {
 		waitForPageLoad(10);
-		waitForElementToBeVisible(idFromTextBox, 10);
+		waitForElementToBeVisible(idFromTextBox, 10, "From Text Box");
 		return this;
 	}
 
@@ -22,10 +22,10 @@ public final class HomePage extends BasePage{
 		WebElement fromTxtbox = DriverManager.getDriver().findElement(idFromTextBox);
 
 		if(fromTxtbox.getAttribute(VALUE) != null || !fromTxtbox.getAttribute(VALUE).isEmpty()) {
-			click(By.xpath("(//a[@class='suggestion-box__clear icon'])[1]"));
+			click(By.xpath("(//a[@class='suggestion-box__clear icon'])[1]"), "Clear Icon - FROM");
 		}
 
-		sendkeys(idFromTextBox, fromCity);
+		sendkeys(idFromTextBox, fromCity, "From Text Box");
 		
 		//Wait for suggestion List
 		new WebDriverWait(DriverManager.getDriver(), 10)
